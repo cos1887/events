@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import _ from 'lodash'
 import Loader from '../Loader/Loader'
+import Message from '../Messages/Message'
 import { getCategoryIcon } from '../../helpers/categoryHelper'
 import slugify from 'slugify';
+
 class SimpleList extends React.Component {
   
 

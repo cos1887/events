@@ -12,7 +12,7 @@ const Menu =(props) => {
     let listClass = `item ${listActive}`; 
     let backClass = `right menu ${hideBack}`; 
     const goBack = () => {
-        history.back(); 
+       window.history.back(); 
     }
     return (
         <div className="ui secondary pointing menu">
