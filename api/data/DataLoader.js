@@ -141,7 +141,21 @@ class DataLoader {
         return null; 
 
     }
+    _getTypeEventFromTitle (title) {
+        const OTHERS =  "Otros"; 
+        const CINE = "cine"
+        
+        const dataTitle = title.toLowerCase(); 
 
+        if (dataTitle.indexOf(CINE)!==-1) {
+            return CINE; 
+        }
+        if (dataTitle.indexOf(CINE)!==-1) {
+            return CINE; 
+        }
+         
+        return OTHERS; 
+    }
     async _addEvent(dataEvent, response) {
         const event = new Event(); 
         const $ = cheerio.load(response)
@@ -187,7 +201,7 @@ class DataLoader {
             let typeObj = this.categories[dataEvent['@type']]; 
             event.type = typeObj.type; 
         } else {
-            event.type = "Otros"; 
+            event.type = _getTypeEventFromTitle(dataEvent.title); 
         }
 
         if(dataEvent.audience) {

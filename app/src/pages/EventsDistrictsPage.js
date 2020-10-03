@@ -26,7 +26,7 @@ const EventsDistrictsPage= (props) => {
     }
 
     return (
-      <div className="page-districts">
+      <div className="page-districts page">
         {renderPageHeader()}
         <Menu  />
         <div className="ui grid">

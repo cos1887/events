@@ -32,7 +32,6 @@ class EventDetail extends React.Component {
       <div className="ui items">
         <EventItem event={event} isDetail={true}/>
       </div>    
-
     ); 
   }
 
@@ -58,6 +57,7 @@ class EventDetail extends React.Component {
                 {this.renderDetail()}
               </div>
               <div className="four wide gmaps">
+            
                 {this.renderMaps()}
               </div>
           </div>

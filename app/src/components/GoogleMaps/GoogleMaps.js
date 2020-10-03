@@ -58,11 +58,13 @@ function Maps(props) {
 
     
     return (
-       
-        <div className="ui card">
-            {getMap()}
-            {getInfoLocation()}
-            {getAction()}
+        <div className="wrapper-map">
+            <h2 className="header">Ubicación</h2>
+            <div className="ui card">
+                {getMap()}
+                {getInfoLocation()}
+                {getAction()}
+            </div>
         </div>
 
     )

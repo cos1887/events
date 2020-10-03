@@ -38,14 +38,23 @@ function EventItem(props) {
 
     let  getActions=() =>{
       if(isDetail) {
-        return ( <div class="actions" > 
+        // <AddToCalendar className="attached right"  buttonLabel="Anadir a mi calendario"  event={event}/>
+        return ( <div className="actions" > 
           
           <ButtonBasic className="attached left" href={event.link} text="Ver Información oficial"icon="linkify" />
-          <AddToCalendar className="attached right"  buttonLabel="Anadir a mi calendario"  event={event}/>
+          
           
         </div>)
       } 
       return <ButtonBasic to={linkTo} text="Detalle "icon="info" />
+    }
+
+    let  getHeaderDetail=() =>{ 
+      if(isDetail) {
+        return (<h1 className="header">{event.title}</h1>);
+      }
+      
+      return ( <Link to={linkTo} className="header">{event.title}</Link>);
     }
 
     return (
@@ -57,7 +66,7 @@ function EventItem(props) {
         
         <div className="middle content item-content">
 
-          <Link to={linkTo} className="header">{event.title}</Link>
+          {getHeaderDetail()}
           <DateItem dateInit={event.dateStart} dateEnd={event.dateEnd} />
           <LocationItem location={event.location} />
           <CategoryItem category={event.type} />

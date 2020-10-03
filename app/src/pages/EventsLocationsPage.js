@@ -25,31 +25,33 @@ class EventsLocations extends React.Component {
     let location = this.props.location;  
   
     return (
-      <h2 className="ui header">
+      <h1 className="ui header">
         <i className="map outline icon"></i>
         <div className="content">
           {location.name}
         </div>
-      </h2>); 
+      </h1>); 
   }
   renderMaps = () => {
     const HEIGHT = 600; 
     let VIEW_MAP_TEXT =true; 
     let VIEW_MAP_TITLE =false; 
     return (
-      <GoogleMaps  
-        height={HEIGHT} 
-        viewtext={VIEW_MAP_TEXT}  
-        viewtitle={VIEW_MAP_TITLE}  
-        {...this.props.location} 
-      />  
+      <div className="gmaps">
+        <GoogleMaps  
+          height={HEIGHT} 
+          viewtext={VIEW_MAP_TEXT}  
+          viewtitle={VIEW_MAP_TITLE}  
+          {...this.props.location} 
+        />  
+      </div>
 
     ); 
   }
   render() {
     if(!this.filters) return <div> </div>
     return (
-      <div className="page-location">
+      <div className="page-location page"> 
          {this.renderPageHeader()}
         <Menu  action={{list:true}}/>
         <div className="ui grid">

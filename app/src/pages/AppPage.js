@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+// import Carousel from 'nuka-carousel';
 
 import Calendar from '../components/Filters/Calendar';
 import Districts from '../components/Filters/Districts';
@@ -16,8 +17,7 @@ const App= () => {
           <title>#EGMad</title>
           <meta name="description" content="Eventos y actividades gratuitas en Madrid" />
         </Helmet>
-        <div className="ui grid">
-
+        <div className="ui grid home">
           <div className="ten wide column main-column">
             <Calendar />
             <div className="ui divider calendar-divider"></div>

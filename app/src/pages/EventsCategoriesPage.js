@@ -30,7 +30,7 @@ const EventsCategoriesPage= (props) => {
     }
 
     return (
-      <div className="page-categories">
+      <div className="page-categories page">
         {renderPageHeader()}
         <Menu  />
         <div className="ui grid">

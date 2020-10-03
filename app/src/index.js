@@ -6,7 +6,8 @@ import reduxThunk from 'redux-thunk'
 
 import EventRouters from './routers/EventRouters';
 import Header from './components/Header/Header';
-import reducers from './reducers'
+import reducers from './reducers';
+import './styles/index.scss';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
