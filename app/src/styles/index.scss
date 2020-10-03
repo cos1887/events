@@ -53,6 +53,11 @@
     background-color: #f5f5f5;
     margin: 1px 0;
   }
+  .page-location {
+    .card {
+      width:100%;
+    }
+  }
   .page-list{ 
     .list-categories {
       padding:20px; 
@@ -68,6 +73,7 @@
   .page {
     .grid {
       padding:20px;
+      max-width: 1200px;
     }
   }
 
@@ -80,6 +86,13 @@
     }
     .gmaps {
       margin-top:0;
+      .wrapper-map {
+        margin-top:35px;
+        h2 {
+          font-size:1em;
+        }
+
+      }
     }
   }
 
@@ -186,28 +199,32 @@
       margin-top:0;
       margin-bottom:0;
     }
-    .item-detail .item{
-      margin:0
-    }
+  
+    
+    .item-detail {
+      .item{
+        margin:0
+      }
+      .gmaps {
+        width: 100%;
+        .wrapper-map {
+          margin-top:0;
+          padding: 50px;
+          background-color: #f3f3f3;
+          h2 {
+            font-size:1.2em;
+          }
+          .card{
+            width: auto;
 
-    .gmaps {
-      width: 100%;
-      .wrapper-map {
-   
-        padding: 50px;
-        background-color: #f3f3f3;
-        h2 {
-          font-size:1.2em;
-        }
-        .card{
-          width: auto;
-
-          .content {
-            padding-left:20px;
+            .content {
+              padding-left:20px;
+            }
           }
         }
-      }
 
+    
+      }  
     }
 
 
@@ -218,7 +235,7 @@
       max-height: none!important;
     }
     .page-categories .ui.header {
-      position: relative;
+      padding-left:5px;
       top: 15px;
     }
     
